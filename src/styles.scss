@@ -1,0 +1,94 @@
+.TargetTime {
+    $root: &;
+    table-layout: fixed;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 12px;
+  
+    .TargetTime__day-checkbox,
+    .TargetTime__times-container {
+      vertical-align: middle;
+    }
+  
+    .TargetTime__day-checkbox {
+      padding-right: .7em;
+    }
+  
+    .TargetTime__hour-checkbox {
+      & > div {
+  
+      }
+    }
+  
+    .TargetTime__days-row {
+      &:last-child {
+        .TargetTime__toggle {
+          border-bottom: 0;
+        }
+      }
+    }
+  
+    .TargetTime__time-cell {
+      cursor: cell;
+      text-align: center;
+      width: 2em;
+      height: 2em;
+  
+      .TargetTime__toggle__icon--active,
+      .TargetTime__toggle__icon--inactive {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+      }
+  
+      .TargetTime__toggle__icon--active {
+        display: none;
+      }
+  
+      .TargetTime__toggle__icon--inactive {
+        display: block;
+      }
+  
+      &__time-checkbox {
+        padding-top: .7em;
+        opacity: 1;
+        word-wrap: break-word;
+        text-align: center;
+      }
+  
+      &--active {
+        .TargetTime__toggle {
+          background: #048A81;
+          color: #fff;
+        }
+  
+        .TargetTime__toggle__icon--inactive {
+          display: none;
+        }
+  
+        .TargetTime__toggle__icon--active {
+          display: block;
+        }
+      }
+    }
+  
+    .TargetTime__toggle {
+      background: #F4F1DE;
+      color: #2E2D4D;
+      display: inline-block;
+      width: inherit;
+      height: inherit;
+      position: relative;
+    }
+  
+    .TargetTime__toggle__icon {
+      display: none;
+      height: inherit;
+      width: inherit;
+    }
+  }
+  
